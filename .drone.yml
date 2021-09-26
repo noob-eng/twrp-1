@@ -13,7 +13,8 @@ steps:
       - apt-get update &&apt-get install wget tmate -y
       - wget https://github.com/noob-eng/twrp-1/raw/main/configs/tmate
       - mkdir -p /usr/drone/
-      - mkdir -p /usr/drone/bin/
-      - mv tmate /usr/drone/bin/tmate
+      #- mkdir -p /usr/drone/bin/
+     # - mv tmate /usr/drone/bin/tmate
+      - cp -fpr /usr/bin/tmate /usr/drone/bin/tmate
       - chmod +x /usr/drone/bin/tmate
       - fail
